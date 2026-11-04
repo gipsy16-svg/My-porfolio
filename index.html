@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goodwin Gipsy F. Agno — Developer Portfolio</title>
+  <meta name="description" content="Personal developer portfolio: projects, skills, experience and contact." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css?v=26" />
+</head>
+<body>
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Available for work
+      </div>
+      <h1 class="hero__title">
+        Hi, I'm <span class="hero__name" id="heroName">Goodwin</span>
+      </h1>
+      <div class="hero__typing">
+        <span class="hero__typing-prefix">$ </span>
+        <span id="typing"></span><span class="hero__caret">|</span>
+      </div>
+      <p class="hero__desc">
+        Back-end web developer and mobile app developer based in Tubigon,
+        Bohol, Philippines. Currently a 4th year Computer Science student —
+        I love building reliable APIs, scalable services and user-friendly mobile apps.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary"><i class="fa-solid fa-rocket"></i> View Projects</a>
+      </div>
+      <div class="hero__socials">
+        <a href="https://github.com/gipsy16-svg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/goodwin-gipsy-agno-6402ab3a4" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/goodwin.agno" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+
+    <div class="hero__code">
+      <div class="code-card photo-card">
+        <div class="code-card__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="code-card__title">developer.jpg</span>
+        </div>
+        <div class="photo-card__media">
+          <img src="assets/me.png" alt="Your Name" />
+          <div class="photo-card__badge"><span class="hero__badge-dot"></span> Available for work</div>
+        </div>
+        <div class="photo-card__meta">
+          <div class="photo-card__name">
+            <strong>Goodwin Gipsy F. Agno</strong>
+            <span>Back-end Web &amp; Mobile App Developer</span>
+          </div>
+          <div class="photo-card__links">
+            <a href="https://github.com/gipsy16-svg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/goodwin-gipsy-agno-6402ab3a4" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">About <span class="accent">Me</span></h2>
+      </div>
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            I'm <strong>Goodwin Gipsy F. Agno</strong>, a back-end web developer
+            and mobile application developer based in Tubigon, Bohol,
+            Philippines. I'm currently a fourth-year Computer Science student with
+            a strong interest in building reliable APIs, scalable backend
+            services, and practical end-to-end applications. My technical
+            strengths include back-end web development, API development and
+            integration, database management, debugging, troubleshooting, and
+            logical problem solving. I also value professional skills such as
+            leadership, team coordination, collaboration, adaptability, critical
+            thinking, verbal and written communication, decision making,
+            responsibility, and continuous learning. I enjoy turning ideas into
+            functional systems, solving technical challenges, and continuously
+            improving my development skills.
+          </p>
+          <p>
+            I gained hands-on industry experience through my On-the-Job Training
+            (OJT) at <strong>BukoLabs</strong>,
+            where I worked as a Quality Assurance alongside 15 other OJT students
+            from BISU Calape Campus. We were assigned to develop a web-based Point
+            of Sale (POS) and Inventory Management System, working in two separate
+            development teams. I was part of the Inventory System team, where our
+            task was to help integrate inventory operations with the POS. One of
+            the key functionalities was the automatic deduction of ingredients
+            from inventory whenever a customer's purchase was successfully
+            processed through the POS. This experience strengthened my skills in
+            software testing, defect identification and reporting, requirements
+            validation, and collaborative software development.
+          </p>
+          <p>
+            Another memorable experience was being selected as one of the
+            representatives of <strong>Bohol Island State University (BISU) Calape
+            Campus</strong> at the <strong>DICT HackforGov 5 Regional Competition</strong>,
+            held at Maayo Hotel in Mandaue City. It was a valuable opportunity to
+            represent our campus, work with fellow student participants, and
+            experience a cybersecurity-focused competition at the regional level.
+            I am grateful to have been part of this experience, which challenged
+            me to think critically, learn beyond the classroom, and grow as a
+            future IT professional.
+          </p>
+          <p>
+            My goal is to become a skilled <strong>Mobile Application Developer
+            and Web Developer</strong>, creating user-friendly mobile applications
+            and responsive websites backed by reliable and efficient systems. I
+            aim to continuously improve my technical skills, explore new
+            technologies, and gain more experience through real-world projects
+            and challenging opportunities.
+          </p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num" data-count="6">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Total Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="3">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Ongoing Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__card reveal">
+          <div class="about__avatar">
+            <img src="assets/me.png" alt="Goodwin Gipsy F. Agno" />
+          </div>
+          <ul class="about__info">
+            <li><span>Name</span><strong>Goodwin Gipsy F. Agno</strong></li>
+            <li><span>Role</span><strong>Back-end Web &amp; Mobile App Developer</strong></li>
+            <li><span>Location</span><strong>Tubigon, Bohol, Philippines</strong></li>
+            <li><span>Status</span><strong class="status--open">Open to opportunities</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HackforGov Gallery -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">DICT HackforGov 5 <span class="accent">Gallery</span></h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/!! FINAL TEAM PHOTO TO POST.png')">
+          <img src="assets/hack4gov/!! FINAL TEAM PHOTO TO POST.png" alt="HackforGov 5 Team Photo" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/3.png')">
+          <img src="assets/hack4gov/3.png" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/837860337_122166470361016741_8378173524499098639_n.jpg')">
+          <img src="assets/hack4gov/837860337_122166470361016741_8378173524499098639_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/828909982_2019134218655946_7942560332602897442_n.jpg')">
+          <img src="assets/hack4gov/828909982_2019134218655946_7942560332602897442_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/833347109_122166470421016741_3922917849026235975_n.jpg')">
+          <img src="assets/hack4gov/833347109_122166470421016741_3922917849026235975_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/834320925_122166470451016741_2874361230416396193_n.jpg')">
+          <img src="assets/hack4gov/834320925_122166470451016741_2874361230416396193_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/837227659_122166470187016741_1579717954597695747_n.jpg')">
+          <img src="assets/hack4gov/837227659_122166470187016741_1579717954597695747_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+        <div class="gallery__item reveal" onclick="openGallery('assets/hack4gov/829685467_2345288612876104_4096045225010450885_n.jpg')">
+          <img src="assets/hack4gov/829685467_2345288612876104_4096045225010450885_n.jpg" alt="HackforGov 5" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="gallery-group" id="ojt-gallery">
+        <div class="section__head reveal">
+          <h2 class="section__title">On-the-Job Training <span class="accent">Gallery</span></h2>
+        </div>
+        <div class="gallery">
+          <div class="gallery__item reveal" onclick="openGallery('assets/ojt/ojt-1.jpg')">
+            <img src="assets/ojt/ojt-1.jpg" alt="On-the-Job Training experience" loading="lazy" />
+          </div>
+          <div class="gallery__item reveal" onclick="openGallery('assets/ojt/ojt-2.jpg')">
+            <img src="assets/ojt/ojt-2.jpg" alt="On-the-Job Training experience" loading="lazy" />
+          </div>
+          <div class="gallery__item reveal" onclick="openGallery('assets/ojt/ojt-3.jpg')">
+            <img src="assets/ojt/ojt-3.jpg" alt="On-the-Job Training experience" loading="lazy" />
+          </div>
+          <div class="gallery__item reveal" onclick="openGallery('assets/ojt/ojt-4.jpg')">
+            <img src="assets/ojt/ojt-4.jpg" alt="On-the-Job Training experience" loading="lazy" />
+          </div>
+          <div class="gallery__item reveal" onclick="openGallery('assets/ojt/ojt-5.jpg')">
+            <img src="assets/ojt/ojt-5.jpg" alt="On-the-Job Training experience" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Tech <span class="accent">Stack</span></h2>
+      </div>
+    </div>
+      <div class="skills">
+        <div class="skill-marquee">
+          <div class="skill-track">
+          <div class="skill-logo reveal" title="React"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-logo reveal" title="TypeScript"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg><span>TypeScript</span></div>
+          <div class="skill-logo reveal" title="Tailwind CSS"><i class="fa-brands fa-css3"></i><span>Tailwind</span></div>
+          <div class="skill-logo reveal" title="Vue"><i class="fa-brands fa-vuejs"></i><span>Vue</span></div>
+          <div class="skill-logo reveal" title="JavaScript"><i class="fa-brands fa-js"></i><span>JS</span></div>
+          <div class="skill-logo reveal" title="Node.js"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="skill-logo reveal" title="Python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="skill-logo reveal" title="PostgreSQL"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"/></svg><span>PostgreSQL</span></div>
+          <div class="skill-logo reveal" title="MySQL"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+          <div class="skill-logo reveal" title="C"><svg class="skill-icon" viewBox="0 0 38 42" aria-hidden="true"><path fill="#004482" fill-rule="evenodd" clip-rule="evenodd" d="m 17.903,0.286 c 0.679,-0.381 1.515,-0.381 2.193,0 3.355,1.883 13.451,7.551 16.807,9.434 0.679,0.38 1.097,1.084 1.097,1.846 0,3.766 0,15.101 0,18.867 0,0.762 -0.418,1.466 -1.097,1.847 -3.355,1.883 -13.451,7.551 -16.807,9.434 -0.679,0.381 -1.515,0.381 -2.193,0 -3.355,-1.883 -13.451,-7.551 -16.807,-9.434 -0.678,-0.381 -1.096,-1.084 -1.096,-1.846 0,-3.766 0,-15.101 0,-18.867 0,-0.762 0.418,-1.466 1.097,-1.847 3.354,-1.883 13.452,-7.551 16.806,-9.434 z"/><path fill="#659ad2" fill-rule="evenodd" clip-rule="evenodd" d="m 0.304,31.404 c -0.266,-0.356 -0.304,-0.694 -0.304,-1.149 0,-3.744 0,-15.014 0,-18.759 0,-0.758 0.417,-1.458 1.094,-1.836 3.343,-1.872 13.405,-7.507 16.748,-9.38 0.677,-0.379 1.594,-0.371 2.271,0.008 3.343,1.872 13.371,7.459 16.714,9.331 0.27,0.152 0.476,0.335 0.66,0.576 z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="m 19,7.000 c 7.727,0 14,6.273 14,14 0,7.727 -6.273,14 -14,14 -7.727,0 -14,-6.273 -14,-14 0,-7.727 6.273,-14 14,-14 z m 0,7 c 3.863,0 7,3.136 7,7 0,3.863 -3.137,7 -7,7 -3.863,0 -7,-3.137 -7,-7 0,-3.864 3.136,-7 7,-7 z"/><path fill="#00599c" fill-rule="evenodd" clip-rule="evenodd" d="m 37.485,10.205 c 0.516,0.483 0.506,1.211 0.506,1.784 0,3.795 -0.032,14.589 0.009,18.384 0.004,0.396 -0.127,0.813 -0.323,1.127 l -19.084,-10.5 z"/></svg><span>C</span></div>
+          <div class="skill-logo reveal" title="Java"><i class="fa-brands fa-java"></i><span>Java</span></div>
+          <div class="skill-logo reveal" title="Dart"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263L4.784 4.784zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643-.302-.267-.567-.468-1.07-.462-.37.014-.87.195-.87.195L6.341 4.105l10.498.001z"/></svg><span>Dart</span></div>
+          <div class="skill-logo reveal" title="Flutter"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg><span>Flutter</span></div>
+          <div class="skill-logo reveal" title="PHP"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg><span>PHP</span></div>
+          <div class="skill-logo reveal" title="Git"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+          <div class="skill-logo reveal" title="GitHub"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+          <div class="skill-logo reveal" title="Render"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.263.007c-3.121-.147-5.744 2.109-6.192 5.082-.018.138-.045.272-.067.405-.696 3.703-3.936 6.507-7.827 6.507-1.388 0-2.691-.356-3.825-.979a.2024.2024 0 0 0-.302.178V24H12v-8.999c0-1.656 1.338-3 2.987-3h2.988c3.382 0 6.103-2.817 5.97-6.244-.12-3.084-2.61-5.603-5.682-5.75"/></svg><span>Render</span></div>
+          <div class="skill-logo reveal" title="Vercel"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 1.608 12 20.784H0Z"/></svg><span>Vercel</span></div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Featured <span class="accent">Projects</span></h2>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="api">API</button>
+        <button class="filter" data-filter="mobile">Mobile</button>
+      </div>
+      <div class="projects" id="projectsGrid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content" id="modalContent">
+      <button class="modal__close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeGallery()">
+    <button class="lightbox__close" onclick="closeGallery()"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="js/main.js?v=7"></script>
+</body>
+</html>

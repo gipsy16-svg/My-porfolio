@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Goodwin Gipsy F. Agno</title>
+  <meta name="description" content="Tech stack and skills." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <canvas id="particles"></canvas>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-bracket">&lt;</span>Goodwin<span class="nav__logo-bracket">&gt;</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+      <button class="nav__theme" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: calc(var(--nav-h) + 3rem);">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag">// skills</span>
+        <h2 class="section__title">Tech <span class="accent">Stack</span></h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group reveal">
+          <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+          <div class="skill-logos">
+            <div class="skill-logo" title="React / Next.js"><i class="fa-brands fa-react"></i><span>React</span></div>
+            <div class="skill-logo" title="TypeScript"><i class="fa-brands fa-html5"></i><span>TypeScript</span></div>
+            <div class="skill-logo" title="Tailwind CSS"><i class="fa-brands fa-css3"></i><span>Tailwind</span></div>
+            <div class="skill-logo" title="Vue / Nuxt"><i class="fa-brands fa-vuejs"></i><span>Vue</span></div>
+            <div class="skill-logo" title="JavaScript"><i class="fa-brands fa-js"></i><span>JS</span></div>
+            <div class="skill-logo" title="HTML5"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fa-solid fa-server"></i> Backend</h3>
+          <div class="skill-logos">
+            <div class="skill-logo" title="Node.js / Express"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+            <div class="skill-logo" title="Python / FastAPI"><i class="fa-brands fa-python"></i><span>Python</span></div>
+            <div class="skill-logo" title="PostgreSQL"><i class="fa-brands fa-postgresql"></i><span>PostgreSQL</span></div>
+            <div class="skill-logo" title="Redis"><i class="fa-brands fa-redis"></i><span>Redis</span></div>
+            <div class="skill-logo" title="Docker"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+            <div class="skill-logo" title="Go"><i class="fa-brands fa-gofore"></i><span>Go</span></div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fa-solid fa-wrench"></i> Tools & DevOps</h3>
+          <div class="skill-logos">
+            <div class="skill-logo" title="Git"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+            <div class="skill-logo" title="GitHub"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+            <div class="skill-logo" title="AWS"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+            <div class="skill-logo" title="Linux"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+            <div class="skill-logo" title="Figma"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+            <div class="skill-logo" title="Vercel"><i class="fa-brands fa-vercel"></i><span>Vercel</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Designed & built with <span class="accent">♥</span> by Goodwin Gipsy F. Agno</p>
+      <p class="footer__small">© <span id="year"></span> · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
