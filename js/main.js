@@ -12,58 +12,44 @@ const SITE = {
 
 const PROJECTS = [
   {
-    title: "SaaS Dashboard",
-    desc: "Analytics dashboard with real-time charts, role-based access and dark mode.",
-    tags: ["React", "TypeScript", "Node", "PostgreSQL"],
-    category: "web",
-    icon: "fa-chart-line",
-    links: { live: "#", code: "#" },
-    details: "A full-featured SaaS analytics dashboard built with React and Node. Features real-time data via WebSockets, RBAC, and a fully responsive UI."
+    title: "Calape Flood Watch",
+    desc: "Flood monitoring and alert system for Calape, Bohol — web platform with companion mobile app.",
+    icon: "fa-cloud-showers-heavy",
+    app: true,
+    links: {
+      live: "https://www.calapefloodwatch.xyz/",
+      code: "https://github.com/gipsy16-svg/Calape-flood-watch"
+    },
+    details: "Flood monitoring and alert system for Calape, Bohol. Web platform with a companion mobile app providing real-time flood alerts and updates."
   },
   {
-    title: "E-commerce API",
-    desc: "RESTful API with payments, inventory and order management.",
-    tags: ["Node", "Express", "Stripe", "MongoDB"],
-    category: "api",
-    icon: "fa-cart-shopping",
-    links: { live: "#", code: "#" },
-    details: "Scalable e-commerce backend with Stripe payments, inventory tracking, JWT auth and comprehensive test coverage."
+    title: "Inventory Management System",
+    desc: "Web-based POS and inventory management system for retail/restaurant (collaborator).",
+    icon: "fa-boxes-stacked",
+    links: {
+      live: "https://ukay-ukay-inventory-management.vercel.app/",
+      code: "https://github.com/gipsy16-svg/inventory-management-system-restaurant-retail"
+    },
+    details: "Web-based Point of Sale and inventory management system for retail/restaurant businesses. Developed as a collaborator."
   },
   {
-    title: "Chat App",
-    desc: "Real-time messaging with rooms, presence and file sharing.",
-    tags: ["Socket.io", "React", "Redis"],
-    category: "web",
-    icon: "fa-comments",
-    links: { live: "#", code: "#" },
-    details: "Real-time chat application supporting rooms, typing indicators, presence and file uploads."
+    title: "Parking Lot System",
+    desc: "Web app for managing parking slots, vehicle entries and exits.",
+    icon: "fa-square-parking",
+    links: {
+      live: "https://parking-lot-system-sfu6.vercel.app/",
+      code: "https://github.com/gipsy16-svg/parking_lot_system"
+    },
+    details: "Web application for managing parking slots, tracking vehicle entries and exits."
   },
   {
-    title: "Mobile Fitness Tracker",
-    desc: "Cross-platform fitness app with workout plans and progress charts.",
-    tags: ["React Native", "Firebase"],
-    category: "mobile",
-    icon: "fa-dumbbell",
-    links: { live: "#", code: "#" },
-    details: "Cross-platform mobile app for tracking workouts, nutrition and progress with offline support."
-  },
-  {
-    title: "AI Content Tool",
-    desc: "Generate and edit marketing copy with AI assistance.",
-    tags: ["Next.js", "OpenAI", "Tailwind"],
-    category: "web",
-    icon: "fa-wand-magic-sparkles",
-    links: { live: "#", code: "#" },
-    details: "AI-powered content generation tool with prompt templates, history and export features."
-  },
-  {
-    title: "Auth Microservice",
-    desc: "JWT/OAuth2 auth service with MFA and rate limiting.",
-    tags: ["Go", "gRPC", "Docker"],
-    category: "api",
-    icon: "fa-shield-halved",
-    links: { live: "#", code: "#" },
-    details: "Standalone authentication microservice supporting OAuth2, MFA, session management and rate limiting."
+    title: "NuvexaApp",
+    desc: "Mobile application project.",
+    icon: "fa-mobile-screen-button",
+    links: {
+      code: "https://github.com/gipsy16-svg/NuvexaApp"
+    },
+    details: "Mobile application project hosted on GitHub."
   }
 ];
 
@@ -247,15 +233,26 @@ const homeGrid = document.getElementById("homeProjectsGrid");
 function createProjectCard(p) {
   const card = document.createElement("div");
   card.className = "project-card reveal";
+  const thumbBtn = p.links && p.links.live
+    ? `<a href="${p.links.live}" target="_blank" class="project-card__thumb-btn" aria-label="${p.app ? "Download app" : "Open website"}"><i class="fa-solid ${p.app ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${p.app ? "Download" : "Visit"}</a>`
+    : "";
+  const liveLink = p.links && p.links.live
+    ? `<a href="${p.links.live}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.app ? "Download App" : "Live Demo"}</a>`
+    : "";
+  const codeLink = p.links && p.links.code
+    ? `<a href="${p.links.code}" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>`
+    : "";
   card.innerHTML = `
-    <div class="project-card__thumb"><i class="fa-solid ${p.icon}"></i></div>
+    <div class="project-card__thumb">
+      <i class="fa-solid ${p.icon}"></i>
+      ${thumbBtn}
+    </div>
     <div class="project-card__body">
       <h3 class="project-card__title">${p.title}</h3>
       <p class="project-card__desc">${p.desc}</p>
-      <div class="project-card__tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
       <div class="project-card__links">
-        <a href="${p.links.live}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-        <a href="${p.links.code}" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+        ${liveLink}
+        ${codeLink}
       </div>
     </div>`;
   card.addEventListener("click", (e) => {
@@ -266,23 +263,15 @@ function createProjectCard(p) {
 }
 
 if (grid) {
-  function renderProjects(filter = "all") {
+  function renderProjects() {
     grid.innerHTML = "";
-    PROJECTS.filter(p => filter === "all" || p.category === filter).forEach(p => {
+    PROJECTS.forEach(p => {
       const card = createProjectCard(p);
       grid.appendChild(card);
       observer.observe(card);
     });
   }
   renderProjects();
-
-  document.querySelectorAll(".filter").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderProjects(btn.dataset.filter);
-    });
-  });
 }
 
 if (homeGrid) {
@@ -301,10 +290,9 @@ function openModal(p) {
   modalBody.innerHTML = `
     <h3>${p.title}</h3>
     <p>${p.details}</p>
-    <div class="modal__tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
     <div class="modal__links">
-      <a href="${p.links.live}" target="_blank" class="btn btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-      <a href="${p.links.code}" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> Source Code</a>
+      ${p.links && p.links.live ? `<a href="${p.links.live}" target="_blank" class="btn btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.app ? "Download App" : "Live Demo"}</a>` : ""}
+      ${p.links && p.links.code ? `<a href="${p.links.code}" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> Source Code</a>` : ""}
     </div>`;
   modal.classList.add("open");
 }
