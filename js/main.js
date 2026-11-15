@@ -44,12 +44,12 @@ const PROJECTS = [
   },
   {
     title: "NuvexaApp",
-    desc: "Mobile application project.",
+    desc: "Nuvexa is an offline-first study and productivity app built with Expo and React Native.",
     icon: "fa-mobile-screen-button",
     links: {
       code: "https://github.com/gipsy16-svg/NuvexaApp"
     },
-    details: "Mobile application project hosted on GitHub."
+    details: "Nuvexa is an offline-first study and productivity app built with Expo and React Native."
   }
 ];
 
