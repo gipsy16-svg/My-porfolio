@@ -15,6 +15,7 @@ const PROJECTS = [
     title: "Calape Flood Watch",
     desc: "Flood monitoring and alert system for Calape, Bohol — web platform with companion mobile app.",
     icon: "fa-cloud-showers-heavy",
+    app: true,
     links: {
       live: "https://www.calapefloodwatch.xyz/",
       code: "https://github.com/gipsy16-svg/Calape-flood-watch"
@@ -247,8 +248,11 @@ function createProjectCard(p) {
   const thumbBtn = primaryUrl
     ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="project-card__thumb-btn" aria-label="${isDownload ? "Download app" : "Open website"}"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download" : "Live Demo"}</a>`
     : "";
-  const primaryLink = primaryUrl
-    ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'}><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download App" : (p.app ? "Download App" : "Live Demo")}</a>`
+  const liveBtn = p.links && p.links.live
+    ? `<a href="${p.links.live}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>`
+    : "";
+  const downloadBtn = (p.app || (p.links && p.links.download))
+    ? `<a href="${p.links && p.links.download ? p.links.download : p.links.live}" ${p.links && p.links.download ? "download" : 'target="_blank"'}><i class="fa-solid fa-download"></i> Download App</a>`
     : "";
   const codeLink = p.links && p.links.code
     ? `<a href="${p.links.code}" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>`
@@ -262,7 +266,8 @@ function createProjectCard(p) {
       <h3 class="project-card__title">${p.title}</h3>
       <p class="project-card__desc">${p.desc}</p>
       <div class="project-card__links">
-        ${primaryLink}
+        ${liveBtn}
+        ${downloadBtn}
         ${codeLink}
       </div>
     </div>`;
@@ -299,12 +304,12 @@ const modalBody = document.getElementById("modalBody");
 function openModal(p) {
   if (!modal || !modalBody) return;
   const primaryUrl = p.links && (p.links.download || p.links.live);
-  const isDownload = !!(p.links && p.links.download);
   modalBody.innerHTML = `
     <h3>${p.title}</h3>
     <p>${p.details}</p>
     <div class="modal__links">
-      ${primaryUrl ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="btn btn--primary"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download App" : (p.app ? "Download App" : "Live Demo")}</a>` : ""}
+      ${p.links && p.links.live ? `<a href="${p.links.live}" target="_blank" class="btn btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>` : ""}
+      ${p.app || (p.links && p.links.download) ? `<a href="${p.links && p.links.download ? p.links.download : p.links.live}" ${p.links && p.links.download ? "download" : 'target="_blank"'} class="btn btn--primary"><i class="fa-solid fa-download"></i> Download App</a>` : ""}
       ${p.links && p.links.code ? `<a href="${p.links.code}" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> Source Code</a>` : ""}
     </div>`;
   modal.classList.add("open");
