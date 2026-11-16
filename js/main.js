@@ -15,7 +15,6 @@ const PROJECTS = [
     title: "Calape Flood Watch",
     desc: "Flood monitoring and alert system for Calape, Bohol — web platform with companion mobile app.",
     icon: "fa-cloud-showers-heavy",
-    app: true,
     links: {
       live: "https://www.calapefloodwatch.xyz/",
       code: "https://github.com/gipsy16-svg/Calape-flood-watch"
@@ -246,7 +245,7 @@ function createProjectCard(p) {
   const primaryUrl = p.links && (p.links.download || p.links.live);
   const isDownload = !!(p.links && p.links.download);
   const thumbBtn = primaryUrl
-    ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="project-card__thumb-btn" aria-label="${isDownload ? "Download app" : "Open website"}"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download" : "Visit"}</a>`
+    ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="project-card__thumb-btn" aria-label="${isDownload ? "Download app" : "Open website"}"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download" : "Live Demo"}</a>`
     : "";
   const primaryLink = primaryUrl
     ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'}><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download App" : (p.app ? "Download App" : "Live Demo")}</a>`
