@@ -15,7 +15,6 @@ const PROJECTS = [
     title: "Calape Flood Watch",
     desc: "Flood monitoring and alert system for Calape, Bohol — web platform with companion mobile app.",
     icon: "fa-cloud-showers-heavy",
-    app: true,
     links: {
       live: "https://www.calapefloodwatch.xyz/",
       code: "https://github.com/gipsy16-svg/Calape-flood-watch"
