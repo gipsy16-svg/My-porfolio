@@ -53,13 +53,13 @@ const PROJECTS = [
   },
   {
     title: "AquaFeed",
-    desc: "Android app for automated fish feeding — control and schedule feeding remotely.",
+    desc: "Android app for fish feeding — control and schedule feeding remotely.",
     icon: "fa-fish",
     app: true,
     links: {
       download: "assets/apps/AquaFeed-new-arm64.apk"
     },
-    details: "AquaFeed is an Android application for automated fish feeding. It lets you control and schedule feeding remotely via a companion device."
+    details: "AquaFeed is an Android application for fish feeding. It lets you control and schedule feeding remotely via a companion device."
   }
 ];
 
