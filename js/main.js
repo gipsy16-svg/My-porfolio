@@ -50,6 +50,16 @@ const PROJECTS = [
       code: "https://github.com/gipsy16-svg/NuvexaApp"
     },
     details: "Nuvexa is an offline-first study and productivity app built with Expo and React Native."
+  },
+  {
+    title: "AquaFeed",
+    desc: "Android app for automated fish feeding — control and schedule feeding remotely.",
+    icon: "fa-fish",
+    app: true,
+    links: {
+      download: "assets/apps/AquaFeed-new-arm64.apk"
+    },
+    details: "AquaFeed is an Android application for automated fish feeding. It lets you control and schedule feeding remotely via a companion device."
   }
 ];
 
@@ -233,11 +243,13 @@ const homeGrid = document.getElementById("homeProjectsGrid");
 function createProjectCard(p) {
   const card = document.createElement("div");
   card.className = "project-card reveal";
-  const thumbBtn = p.links && p.links.live
-    ? `<a href="${p.links.live}" target="_blank" class="project-card__thumb-btn" aria-label="${p.app ? "Download app" : "Open website"}"><i class="fa-solid ${p.app ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${p.app ? "Download" : "Visit"}</a>`
+  const primaryUrl = p.links && (p.links.download || p.links.live);
+  const isDownload = !!(p.links && p.links.download);
+  const thumbBtn = primaryUrl
+    ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="project-card__thumb-btn" aria-label="${isDownload ? "Download app" : "Open website"}"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download" : "Visit"}</a>`
     : "";
-  const liveLink = p.links && p.links.live
-    ? `<a href="${p.links.live}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.app ? "Download App" : "Live Demo"}</a>`
+  const primaryLink = primaryUrl
+    ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'}><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download App" : (p.app ? "Download App" : "Live Demo")}</a>`
     : "";
   const codeLink = p.links && p.links.code
     ? `<a href="${p.links.code}" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>`
@@ -251,7 +263,7 @@ function createProjectCard(p) {
       <h3 class="project-card__title">${p.title}</h3>
       <p class="project-card__desc">${p.desc}</p>
       <div class="project-card__links">
-        ${liveLink}
+        ${primaryLink}
         ${codeLink}
       </div>
     </div>`;
@@ -287,11 +299,13 @@ const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modalBody");
 function openModal(p) {
   if (!modal || !modalBody) return;
+  const primaryUrl = p.links && (p.links.download || p.links.live);
+  const isDownload = !!(p.links && p.links.download);
   modalBody.innerHTML = `
     <h3>${p.title}</h3>
     <p>${p.details}</p>
     <div class="modal__links">
-      ${p.links && p.links.live ? `<a href="${p.links.live}" target="_blank" class="btn btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${p.app ? "Download App" : "Live Demo"}</a>` : ""}
+      ${primaryUrl ? `<a href="${primaryUrl}" ${isDownload ? "download" : 'target="_blank"'} class="btn btn--primary"><i class="fa-solid ${isDownload ? "fa-download" : "fa-arrow-up-right-from-square"}"></i> ${isDownload ? "Download App" : (p.app ? "Download App" : "Live Demo")}</a>` : ""}
       ${p.links && p.links.code ? `<a href="${p.links.code}" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> Source Code</a>` : ""}
     </div>`;
   modal.classList.add("open");
